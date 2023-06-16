@@ -49,5 +49,27 @@ abcdef"</h1>
     d=1
     e=2
     f=1"</h1>
+    <pre>
+        function countAlphabetOccurrences(str) {
+            const charCountMap = new Map();
+          
+            for (let i = 0; i < str.length; i++) {
+              const char = str[i];
+          
+              if (charCountMap.has(char)) {
+                charCountMap.set(char, charCountMap.get(char) + 1);
+              } else {
+                charCountMap.set(char, 1);
+              }
+            }
+          
+            // Print the count of each alphabet
+            charCountMap.forEach((count, char) => {
+              console.log(`${char}=${count}`);
+            });
+          }
+          const str = "abcadeecfb";
+          countAlphabetOccurrences(str);
+    </pre>
 </body>
 </html>
